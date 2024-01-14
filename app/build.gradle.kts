@@ -66,4 +66,24 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation(project(":core"))
+
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.5.0")
+
+    //lottie
+    implementation("com.airbnb.android:lottie:6.2.0")
+
+    //shimmer
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+
+    //livedata
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+
+    //splash screen
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
+    //Animated like button
+    implementation("com.github.jd-alexander:LikeButton:0.2.3")
 }

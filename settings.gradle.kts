@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Astronomy View"
 include(":app")
- 
+include(":core")
