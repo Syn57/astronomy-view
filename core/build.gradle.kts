@@ -1,7 +1,10 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
 }
+
+apply(from = "../shared_dependencies.gradle")
 
 android {
     namespace = "com.nodz.aview.core"
