@@ -77,6 +77,7 @@ dependencies {
 
     //lottie
     implementation("com.airbnb.android:lottie:6.2.0")
+    implementation ("com.airbnb.android:lottie-compose:6.3.0")
 
     //shimmer
     implementation("com.facebook.shimmer:shimmer:0.5.0")
