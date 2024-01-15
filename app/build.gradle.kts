@@ -84,6 +84,8 @@ dependencies {
     //livedata
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.compose.compiler:compiler:1.5.8")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 
     //splash screen
     implementation("androidx.core:core-splashscreen:1.0.1")
@@ -93,4 +95,10 @@ dependencies {
 
     //Navigation
     implementation ("androidx.navigation:navigation-compose:2.7.6")
+
+    //Pager
+    implementation("com.google.accompanist:accompanist-pager:0.22.0-rc")
+
+    //Constraint Layout
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 }
