@@ -44,7 +44,7 @@ android {
         buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.5"
+        kotlinCompilerExtensionVersion = "1.5.2"
     }
     packaging {
         resources {
@@ -102,4 +102,7 @@ dependencies {
 
     //Constraint Layout
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+
+    //System UI
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.0")
 }

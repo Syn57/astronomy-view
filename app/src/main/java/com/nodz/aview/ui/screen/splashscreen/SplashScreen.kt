@@ -11,6 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.BlendMode.Companion.Screen
+import androidx.navigation.NavHostController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
@@ -18,7 +20,9 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.nodz.aview.R
 
 @Composable
-fun SplashScreen() {
+fun SplashScreen(
+    navController: NavHostController
+) {
     Scaffold(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -38,13 +42,18 @@ fun SplashScreen() {
             ) {
                 val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.space))
                 val progress by animateLottieCompositionAsState(composition = composition)
+                val progressState = animateLottieCompositionAsState(composition = composition)
                 LottieAnimation(
                     composition = composition,
                     modifier = Modifier.fillMaxSize(0.4f),
                     progress = {
                         progress
-                    })
-
+                    }
+                )
+                if (progressState.isAtEnd && progressState.isPlaying) {
+                    navController.popBackStack()
+                    navController.navigate("main_screen")
+                }
             }
         }
     }
