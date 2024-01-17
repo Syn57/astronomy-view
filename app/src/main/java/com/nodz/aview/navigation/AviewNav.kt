@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.nodz.aview.ui.screen.onboarding.OnboardingScreen
 import com.nodz.aview.ui.screen.splashscreen.SplashScreen
 
 @Composable
@@ -21,6 +22,9 @@ fun AviewNav(){
         }
         composable("main_screen"){
             MainScreen()
+        }
+        composable("onboarding") {
+            OnboardingScreen()
         }
     }
 }

@@ -52,7 +52,7 @@ fun SplashScreen(
                 )
                 if (progressState.isAtEnd && progressState.isPlaying) {
                     navController.popBackStack()
-                    navController.navigate("main_screen")
+                    navController.navigate("onboarding")
                 }
             }
         }
