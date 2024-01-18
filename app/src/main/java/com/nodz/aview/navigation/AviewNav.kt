@@ -14,23 +14,26 @@ import com.nodz.aview.ui.screen.onboarding.OnboardingScreen
 import com.nodz.aview.ui.screen.splashscreen.SplashScreen
 
 @Composable
-fun AviewNav(){
+fun AviewNav() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "splash_screen"){
-        composable("splash_screen"){
+    NavHost(
+        navController = navController,
+        startDestination = Screen.SplashScreen.route
+    ) {
+        composable(Screen.SplashScreen.route) {
             SplashScreen(navController)
         }
-        composable("main_screen"){
+        composable("main_screen") {
             MainScreen()
         }
-        composable("onboarding") {
+        composable(Screen.Onboarding.route) {
             OnboardingScreen()
         }
     }
 }
 
 @Composable
-fun MainScreen(){
+fun MainScreen() {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,

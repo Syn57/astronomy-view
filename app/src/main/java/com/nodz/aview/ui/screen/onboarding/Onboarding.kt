@@ -15,6 +15,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.PagerState
+import com.google.accompanist.pager.rememberPagerState
 import com.nodz.aview.R
 
 @OptIn(
@@ -23,20 +24,18 @@ import com.nodz.aview.R
 )
 @Composable
 fun OnboardingScreen() {
+    val pagerState = rememberPagerState()
+    val listImgOnboard = listOf(R.drawable.bg_obscreen_1, R.drawable.bg_obscreen_2, R.drawable.bg_obscreen_3)
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()
     ) {
-        val pagerState by remember { mutableStateOf(PagerState(0)) }
-        val listImgOnboard = listOf(R.drawable.bg_obscreen_1, R.drawable.bg_obscreen_2, R.drawable.bg_obscreen_3)
-        val imgOnboard = painterResource(id = listImgOnboard[pagerState.currentPage])
-
         HorizontalPager(
             state = pagerState,
-            count = listImgOnboard.size,
+            count = 3,
             modifier = Modifier.fillMaxWidth()
-        ) {
+        ) { position ->
             Image(
-                painter = imgOnboard,
+                painter = painterResource(id = listImgOnboard[position]),
                 contentDescription = "",
                 contentScale = ContentScale.FillWidth,
                 modifier = Modifier.fillMaxSize()
