@@ -32,10 +32,10 @@ fun AviewNav() {
                     color = Color.White
                 )
             }
-            SplashScreen(navController, systemUiController)
+            SplashScreen(navController)
         }
         composable("main_screen") {
-            MainScreen(systemUiController)
+            MainScreen()
         }
         composable(Screen.Onboarding.route) {
             SideEffect {
@@ -43,13 +43,13 @@ fun AviewNav() {
                     color = Color(0xFF5D5D72)
                 )
             }
-            OnboardingScreen(systemUiController)
+            OnboardingScreen()
         }
     }
 }
 
 @Composable
-fun MainScreen(systemUiController: SystemUiController) {
+fun MainScreen() {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,

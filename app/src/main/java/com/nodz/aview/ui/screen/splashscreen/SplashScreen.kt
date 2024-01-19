@@ -28,8 +28,7 @@ import com.nodz.aview.R
 
 @Composable
 fun SplashScreen(
-    navController: NavHostController,
-    systemUiController: SystemUiController
+    navController: NavHostController
 ) {
     Scaffold(
         modifier = Modifier.fillMaxSize()
@@ -59,9 +58,6 @@ fun SplashScreen(
                         progress
                     }
                 )
-//                systemUiController.setSystemBarsColor(
-//                    color = Color(0xFF635B70)
-//                )
                 if (progressState.isAtEnd && progressState.isPlaying) {
                     navController.popBackStack()
                     navController.navigate("onboarding")

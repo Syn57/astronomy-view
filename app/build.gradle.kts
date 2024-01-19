@@ -76,7 +76,7 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.5.0")
 
     //lottie
-    implementation("com.airbnb.android:lottie:6.2.0")
+    implementation("com.airbnb.android:lottie:6.3.0")
     implementation ("com.airbnb.android:lottie-compose:6.3.0")
 
     //shimmer
@@ -105,4 +105,7 @@ dependencies {
 
     //System UI
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.0")
+
+    //Material
+    implementation("androidx.compose.material:material:1.5.4")
 }

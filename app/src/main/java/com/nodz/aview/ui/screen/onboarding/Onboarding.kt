@@ -26,7 +26,7 @@ import com.nodz.aview.R
     ExperimentalPagerApi::class
 )
 @Composable
-fun OnboardingScreen(systemUiController: SystemUiController) {
+fun OnboardingScreen() {
     val pagerState = rememberPagerState()
     val listImgOnboard = listOf(R.drawable.bg_obscreen_1, R.drawable.bg_obscreen_2, R.drawable.bg_obscreen_3)
     ConstraintLayout(
