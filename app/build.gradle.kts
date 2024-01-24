@@ -108,4 +108,8 @@ dependencies {
 
     //Material
     implementation("androidx.compose.material:material:1.5.4")
+
+    //Glassmorphism
+    implementation("com.github.prime-zs.toolkit:core-ktx:2.0.2-alpha")
+
 }
