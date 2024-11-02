@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("buildLogic")
     repositories {
         google {
             content {
@@ -19,5 +20,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Astronomy View"
+rootProject.name = "AstronomyView"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
