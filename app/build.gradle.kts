@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.aview.android.application.compose)
     alias(libs.plugins.aview.hilt)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
@@ -38,6 +39,8 @@ android {
 
 dependencies {
 
+    implementation(projects.navigation)
+
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3.adaptive)
     implementation(libs.androidx.compose.material3.adaptive.layout)
@@ -56,6 +59,10 @@ dependencies {
     implementation(libs.coil.kt)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
 
     ksp(libs.hilt.compiler)
 

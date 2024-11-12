@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildLogic" />
             <option value="$PROJECT_DIR$/buildLogic/convention" />
+            <option value="$PROJECT_DIR$/navigation" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
